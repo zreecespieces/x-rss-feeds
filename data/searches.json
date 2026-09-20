@@ -1,10 +1,15 @@
 {
-  "一途ビッチちゃん": "一途ビッチちゃん from:iro_ironon filter:images exclude:retweets",
-  "#赤松健の国会にっき": "#赤松健の国会にっき from:KenAkamatsu filter:images exclude:retweets",
-  "まいにちめんだこ": "from:daily_mendako filter:images exclude:retweets",
-  "さんぽんた": "今日のさんぽんた from:rikirosso filter:images exclude:retweets",
-  "がい子くじん": "from:gaiko_kujin filter:images exclude:retweets",
-  "せかねこ": "from:sekaneko13 filter:images exclude:retweets",
-  "もよりの商店街": "from:twi_sirius もよりの商店街 -\"毎週月・水・金曜日更新\" filter:images exclude:retweets",
-  "がんばってはたらく": "from:mozuku_zqu filter:images exclude:retweets"
+  "dev-opencode": "\"OpenCode\" OR #OpenCode -filter:retweets lang:en",
+  "dev-coding-agents": "#ClaudeCode OR #Codex OR #Cursor OR \"Claude Code\" -filter:retweets lang:en",
+  "dev-agent-launches": "\"AI coding agent\" launch OR release -filter:retweets lang:en",
+  "dev-agent-runtimes": "\"agent runtime\" OR \"agent orchestration\" OR herdr -filter:retweets lang:en",
+  "dev-tool-discovery": "\"just launched\" AI developer tool -filter:retweets lang:en",
+  "researchers-lab-leaders": "from:sama OR from:DarioAmodei OR from:DemisHassabis OR from:karpathy OR from:lilianweng -filter:retweets",
+  "researchers-edu-voices": "from:emollick OR from:ddmeyer OR from:AndrewYNg OR from:fchollet OR from:GaryMarcus -filter:retweets",
+  "competitors-edtech": "from:magicschoolai OR from:GetSchoolAI OR from:khanacademy OR from:curipodofficial OR from:briskteaching OR from:IXLLearning OR from:DiscoveryEd -filter:retweets",
+  "competitors-lab-edu": "from:OpenAI OR from:AnthropicAI OR from:GoogleForEdu OR from:MicrosoftEDU -filter:retweets",
+  "edtech-moves": "\"AI tutor\" K-12 launch OR funding OR district -filter:retweets lang:en",
+  "policy-edtech": "\"AI in education\" policy OR \"AI literacy\" schools -filter:retweets lang:en",
+  "policy-student-privacy": "\"student data\" AI OR COPPA OR FERPA schools -filter:retweets lang:en",
+  "brand-flint": "\"Sparky\" AI tutor OR \"Flint\" K-12 -filter:retweets lang:en"
 }
