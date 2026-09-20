@@ -13,7 +13,7 @@ on:
 
 jobs:
   update-rss:
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
 
     steps:
       - name: 🛎 Checkout
@@ -26,16 +26,6 @@ jobs:
 
       - name: Enable corepack (yarn)
         run: corepack enable
-
-      - name: Install apt dependencies
-        uses: nick-fields/retry@ad984534de44a9489a53aefd81eb77f87c70dc60 # v4
-        with:
-          max_attempts: 3
-          timeout_minutes: 10
-          command: |
-            sudo apt-get update
-            grep -vE '^\s*#|^\s*$' .github/apt-packages.txt | xargs sudo apt-get install -y
-            fc-cache -fv
 
       - name: Install nodejs dependencies
         run: yarn
@@ -104,12 +94,7 @@ jobs:
       - name: Update RSS
         id: update-rss
         run: |
-          rm /tmp/.X*-lock || true
-          rm -rf data/userdata/Singleton* || true
-          Xvfb :99 -ac -screen 0 600x1000x16 -listen tcp &
-          export DISPLAY=:99
           yarn build
-          kill -9 "$(pgrep -f "Xvfb" | awk '{print $2}')" || true
         env:
           TWITTER_USERNAME: ${{ secrets.TWITTER_USERNAME }}
           TWITTER_PASSWORD: ${{ secrets.TWITTER_PASSWORD }}
