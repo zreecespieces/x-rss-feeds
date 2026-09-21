@@ -11,5 +11,6 @@
   "edtech-moves": "\"AI tutor\" K-12 launch OR funding OR district -filter:retweets lang:en",
   "policy-edtech": "\"AI in education\" policy OR \"AI literacy\" schools -filter:retweets lang:en",
   "policy-student-privacy": "\"student data\" AI OR COPPA OR FERPA schools -filter:retweets lang:en",
-  "brand-flint": "\"Sparky\" AI tutor OR \"Flint\" K-12 -filter:retweets lang:en"
+  "brand-flint": "\"Sparky\" AI tutor OR \"Flint\" K-12 -filter:retweets lang:en",
+  "tech-twitter-viral": "(AI OR LLM OR \"coding agent\" OR developer) min_faves:1000 -filter:retweets lang:en"
 }
