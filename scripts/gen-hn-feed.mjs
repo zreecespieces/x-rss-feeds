@@ -11,11 +11,11 @@ const OUT = 'output/hn-top.xml'
 
 function escapeXml(s) {
   return String(s)
-    .replace(/&/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;')
-    .replace(/"/g, '&quot;')
-    .replace(/'/g, '&apos;')
+    .replaceAll('&', '&amp;')
+    .replaceAll('<', '&lt;')
+    .replaceAll('>', '&gt;')
+    .replaceAll('"', '&quot;')
+    .replaceAll('\'', '&apos;')
 }
 
 async function get(path) {
@@ -79,7 +79,4 @@ async function main() {
   console.log(`Generated ${OUT} with ${stories.length} stories`)
 }
 
-main().catch((err) => {
-  console.error(err)
-  process.exit(1)
-})
+await main()
