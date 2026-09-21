@@ -1,9 +1,11 @@
-// Generates output/hn-top.xml — an RSS 2.0 feed of the current Hacker News top 10 stories.
+// Generates output/hn-top.xml — an RSS 2.0 feed of the current Hacker News top 30 stories.
 // Runs as a GitHub Actions step before `yarn build` so generateList() picks it up
 // for the index page. No dependencies, no auth: uses the public HN Firebase API.
+// Emits 30 stories so the digest can filter out previously-covered ones and still
+// show 10 new stories ("top 10 new to me").
 import fs from 'node:fs'
 
-const TOP_N = 10
+const TOP_N = 30
 const HN_API = 'https://hacker-news.firebaseio.com/v0'
 const OUT = 'output/hn-top.xml'
 
@@ -64,7 +66,7 @@ async function main() {
     `<rss version="2.0">\n` +
     `  <channel>\n` +
     `    <title>hn-top</title>\n` +
-    `    <description>Hacker News top 10 stories (hourly snapshot)</description>\n` +
+    `    <description>Hacker News top 30 stories (hourly snapshot)</description>\n` +
     `    <link>https://news.ycombinator.com</link>\n` +
     `    <generator>flint-digest/hn-feed</generator>\n` +
     `    <language>en</language>\n` +
