@@ -97,12 +97,6 @@ jobs:
         run: |
           node scripts/gen-hn-feed.mjs
 
-      - name: Generate HN top-10 feed
-        # Plain node script, no deps, no auth (public HN API).
-        # Writes output/hn-top.xml before yarn build so generateList() adds it to the index.
-        run: |
-          node scripts/gen-hn-feed.mjs
-
       - name: Update RSS
         id: update-rss
         run: |
